@@ -1,0 +1,50 @@
+body {
+  background-image:
+    radial-gradient(circle at 15% 15%, rgba(99, 102, 241, 0.14), transparent 40%),
+    radial-gradient(circle at 85% 85%, rgba(236, 72, 153, 0.12), transparent 40%);
+}
+
+.glass-panel {
+  background: rgba(15, 23, 42, 0.65);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border: 1px solid rgba(148, 163, 184, 0.12);
+}
+
+.mode-btn.active {
+  background-color: #4f46e5;
+  color: #ffffff;
+}
+
+@keyframes shakePlayer {
+  0%, 100% { transform: translateY(0) rotate(0deg); }
+  50% { transform: translateY(-14px) rotate(-12deg); }
+}
+
+@keyframes shakeCpu {
+  0%, 100% { transform: translateY(0) rotate(0deg); }
+  50% { transform: translateY(-14px) rotate(12deg); }
+}
+
+.animate-shake-player {
+  animation: shakePlayer 0.35s ease-in-out infinite;
+}
+
+.animate-shake-cpu {
+  animation: shakeCpu 0.35s ease-in-out infinite;
+}
+
+.glow-win {
+  border-color: #10b981 !important;
+  box-shadow: 0 0 25px rgba(16, 185, 129, 0.35);
+}
+
+.glow-lose {
+  border-color: #f43f5e !important;
+  box-shadow: 0 0 25px rgba(244, 63, 94, 0.3);
+}
+
+.glow-tie {
+  border-color: #f59e0b !important;
+  box-shadow: 0 0 20px rgba(245, 158, 11, 0.25);
+}
